@@ -8,10 +8,30 @@
     <title>Document</title>
 </head>
 <body>
-   
-    
-
-
+    <header>
+        <h1>QuizTime</h1>
+    </header>
+    <div class="text-intro">
+        <p>Test your knowlege with these questions and have fun!</p>
+        <button class="start">
+            <input type="submit" value="start">
+        </button>
+    </div>
+    <div class="question-area">
+        <p class="questions">Question<span class="question-number"></span></p>
+        <form class="chose-answer">
+            <input type="radio" name="choice" value="answer1">
+            <input type="radio" name="choice" value="answer2">
+            <input type="radio" name="choice" value="answer3">
+            <input type="radio" name="choice" value="answer4">
+        </form>
+    </div>
+    <div class="navigate">
+        <p class="previous">Previous</p>
+        <p class="next">Next</p>
+    </div>
+    <div class="scores">
+    </div>
     <script type="text/javascript" src="assets/js/script.js"></script>
 </body>
 </html>
