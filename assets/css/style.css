@@ -17,15 +17,15 @@ header {
 .title {
     border-bottom: solid;
 }
-.text-intro {
+#textIntro {
     margin:2rem;
     padding:2rem;
 }
-.text-intro img {
+#textIntro img {
     height: 40%;
     width: 20%;
 }
-.text-intro button {
+#textIntro button {
     font-size: 140%;
 }
 #questionArea {
