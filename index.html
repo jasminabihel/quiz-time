@@ -16,9 +16,9 @@
     <div class="text-intro">
         <img src="assets/images/quiz-ribbon-banner-with-megaphone.png" alt="image of a megafon with quiz ribbon banner sign">
         <p>Test your knowlege with these questions and have fun!</p>
-        <button class="start">Start</button>
+        <button data-type="start" class="start" onclick="startGame()">Start</button>
     </div>
-    <div class="questionArea">
+    <div id="questionArea">
         <p>Question<span class="questionNumber"></span></p>
         <form class="choseAnswer">
             <input type="radio" name="choice" value="answer1">Answer
@@ -28,9 +28,9 @@
         </form>
     </div>
     <div class="navigate">
-        <button class="previous">Previous</button>
-        <button class="next">Next</button>
-        <button class="end">End</button>
+        <button data-type="previous" class="previous">Previous</button>
+        <button data-type="next" class="next">Next</button>
+        <button data-type="end" class="end">End</button>
     </div>
     <div class="scores">
         <p>Your score is: <span id="score"></span></p>

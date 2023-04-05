@@ -28,7 +28,7 @@ header {
 .text-intro button {
     font-size: 140%;
 }
-.question-area {
+#questionArea {
     margin: 2rem;
     padding: 1rem;
     display:none;
