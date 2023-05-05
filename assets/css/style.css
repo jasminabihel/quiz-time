@@ -17,41 +17,46 @@ header {
 .title {
     border-bottom: solid;
 }
+
 #textIntro {
-    margin:2rem;
-    padding:2rem;
+    margin: 2rem;
+    padding: 2rem;
 }
+
 #textIntro img {
     height: 40%;
     width: 20%;
 }
+
 #textIntro button {
     font-size: 140%;
 }
+
 #questionArea {
     margin: 2rem;
     padding: 1rem;
-    display:none;
-
+    font-weight: 500;
 }
 
 .navigate {
     margin: 2rem;
     padding: 1rem;
-    display:none;
+    font-weight: 400;
 }
 
 .scores {
     margin: 2rem;
     padding: 1rem;
-    display:none;
+    font-weight: 500;
 }
 
 footer {
     font-weight: 600;
     font-size: 100%;
     border-top: solid;
+    padding-top: 1rem;
 }
+
 .hidden {
-    display:none;
+    display: none;
 }

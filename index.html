@@ -18,21 +18,29 @@
         <p>Test your knowlege with these questions and have fun!</p>
         <button data-type="start" class="start" onclick="startGame()">Start</button>
     </div>
-    <div id="questionArea">
+    <div id="questionArea" class="hidden">
         <p>Question <span id="questionNumber"></span></p>
         <p id="question"></p>
-        <form class="choseAnswer">
-            <input type="radio" name="choice" value="answer1">Answer
-            <input type="radio" name="choice" value="answer2">Answer
-            <input type="radio" name="choice" value="answer3">Answer
-            <input type="radio" name="choice" value="answer4">Answer
+        <form class="choseAnswer" id="answers">
+            <input type="radio" name="choice" id ="answer1" value="answer1"/>
+            <label for="answer1"></label>
+
+            <input type="radio" name="choice" id ="answer2" value="answer2"/>
+            <label for="answer2"></label>
+
+            <input type="radio" name="choice" id ="answer3"  value="answer3"/>
+            <label for="answer3"></label>
+            
+            <input type="radio" name="choice" id ="answer4" value="answer4"/>
+            <label for="answer4"></label>
+           
         </form>
     </div>
-    <div class="navigate">
-        <button data-type="next" class="next" onclick="getNextQuestion()">Next</button>
-        <button data-type="end" class="end" onclick="score()">Submit</button>
+    <div class="navigate hidden" id="nav">
+        <button data-type="next" id="next" onclick="getNextQuestion()">Next</button>
+        <button data-type="end" id="end" onclick="score()">Finish</button>
     </div>
-    <div class="scores">
+    <div class="scores hidden">
         <p>Your score is: <span id="score"></span></p>
     </div>
     <footer>
