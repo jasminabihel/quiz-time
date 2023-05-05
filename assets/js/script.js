@@ -39,7 +39,7 @@ const questions = [
 
 let data = {
     score:0,
-    questionNumber:0,
+    questionNumber:-1,
 }
 
 function startGame() {
@@ -52,33 +52,45 @@ function startGame() {
 }
  
 function getNextQuestion() {
+    data.questionNumber++;
+
     let q = questions[data.questionNumber];
     document.getElementById("question").innerText = q.question;
-    
-    data.questionNumber++;
-    document.getElementById("questionNumber").innerText = data.questionNumber;
+    document.getElementById("questionNumber").innerText = data.questionNumber + 1;
 
     const answerInputs = document.getElementById("answers").children;
-    console.dir(answerInputs[0])
     answerInputs[1].innerText = q.answer1;
-    console.dir(answerInputs[0])
     answerInputs[3].innerText = q.answer2;
     answerInputs[5].innerText = q.answer3;
     answerInputs[7].innerText = q.answer4;
 
     document.getElementById("answers").reset();
+    enableDisableAnswers(false);
 }
 
-function chooseAnswer() {
-    document.getElementsByClassName("choseAnswer")[0].innerHTML=type.choice;
+function checkAnswer(selectedAnswer) {
+    let q = questions[data.questionNumber];
+    if (q.correct === selectedAnswer) {
+        data.score++;
+        console.log("Correct")
 
- }
+    } else {
+        console.log("Incorrect")
+    }
+    enableDisableAnswers(true);
+}
 
-function checkAnswer() {
-
-
+function enableDisableAnswers(disable){
+    let children = document.getElementById("answers").children;
+    for (let i = 0; i < children.length; i++ ) {
+        children[i].disabled = disable;
+    }
 }
 
 function score() {
-    console.log("scoreA")
+    document.getElementById("scores").classList.remove("hidden");
+    document.getElementById("questionArea").classList.add("hidden");
+    document.getElementById("nav").classList.add("hidden");
+
+    document.getElementById("score").innerText = data.score;
 }

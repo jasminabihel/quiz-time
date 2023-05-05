@@ -22,16 +22,16 @@
         <p>Question <span id="questionNumber"></span></p>
         <p id="question"></p>
         <form class="choseAnswer" id="answers">
-            <input type="radio" name="choice" id ="answer1" value="answer1"/>
+            <input type="radio" name="choice" id ="answer1" value="answer1" onclick="checkAnswer('answer1')"/>
             <label for="answer1"></label>
 
-            <input type="radio" name="choice" id ="answer2" value="answer2"/>
+            <input type="radio" name="choice" id ="answer2" value="answer2" onclick="checkAnswer('answer2')"/>
             <label for="answer2"></label>
 
-            <input type="radio" name="choice" id ="answer3"  value="answer3"/>
+            <input type="radio" name="choice" id ="answer3"  value="answer3" onclick="checkAnswer('answer3')"/>
             <label for="answer3"></label>
-            
-            <input type="radio" name="choice" id ="answer4" value="answer4"/>
+
+            <input type="radio" name="choice" id ="answer4" value="answer4" onclick="checkAnswer('answer4')"/>
             <label for="answer4"></label>
            
         </form>
@@ -40,7 +40,7 @@
         <button data-type="next" id="next" onclick="getNextQuestion()">Next</button>
         <button data-type="end" id="end" onclick="score()">Finish</button>
     </div>
-    <div class="scores hidden">
+    <div id="scores" class="hidden">
         <p>Your score is: <span id="score"></span></p>
     </div>
     <footer>
