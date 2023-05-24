@@ -72,10 +72,11 @@ function checkAnswer(selectedAnswer) {
     let q = questions[data.questionNumber];
     if (q.correct === selectedAnswer) {
         data.score++;
-        console.log("Correct")
+        let rightAnswer = getElementById("rightAnswer")
+        rightAnswer.innerHtml = "You are Correct";
 
     } else {
-        console.log("Incorrect")
+        document.write("<p>Sorry, that is not correct</p>");
     }
     enableDisableAnswers(true);
 }
