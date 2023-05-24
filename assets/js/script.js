@@ -72,7 +72,7 @@ function checkAnswer(selectedAnswer) {
     let q = questions[data.questionNumber];
     if (q.correct === selectedAnswer) {
         data.score++;
-        let rightAnswer = getElementById("rightAnswer")
+        let rightAnswer = document.getElementById("rightAnswer");
         rightAnswer.innerHtml = "You are Correct";
 
     } else {
