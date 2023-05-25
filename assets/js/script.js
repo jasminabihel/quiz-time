@@ -45,7 +45,7 @@ let data = {
 function startGame() {
     document.getElementById("questionArea").classList.remove("hidden");
     document.getElementById("next").classList.remove("hidden");
-
+    document.getElementById("end").classList.remove("hidden");
     document.getElementById("textIntro").classList.add("hidden");
 
     getNextQuestion(); 
@@ -64,6 +64,8 @@ function getNextQuestion() {
     answerInputs[5].innerText = q.answer3;
     answerInputs[7].innerText = q.answer4;
 
+
+
     document.getElementById("answers").reset();
     enableDisableAnswers(false);
 }
@@ -72,6 +74,7 @@ function checkAnswer(selectedAnswer) {
     let q = questions[data.questionNumber];
     if (q.correct === selectedAnswer) {
         data.score++;
+        while (data)
         document.getElementById("rightAnswer").innerHTML="Correct";
 
     } else {
@@ -79,6 +82,7 @@ function checkAnswer(selectedAnswer) {
         
     }
     enableDisableAnswers(true);
+
 }
 
 function enableDisableAnswers(disable){
@@ -86,6 +90,15 @@ function enableDisableAnswers(disable){
     for (let i = 0; i < children.length; i++ ) {
         children[i].disabled = disable;
     }
+}
+function finishButton () {
+    if (questionNumber === 4){
+        document.getElementById("end").enable;
+    }
+    else {
+        document.getElementById("end").disable;
+    }
+
 }
 
 function score() {
