@@ -72,10 +72,12 @@ function checkAnswer(selectedAnswer) {
     let q = questions[data.questionNumber];
     if (q.correct === selectedAnswer) {
         data.score++;
-        alert ("You are Correct")
+        document.getElementById("rightAnswer").innerHTML="Correct";
+        document.getElementById("answers").reset();
 
     } else {
-        alert ("Sorry, that is not correct");
+        document.getElementById("wrongAnswer").innerHTML="Sorry, you are not correct";
+        document.getElementById("answers").reset();
     }
     enableDisableAnswers(true);
 }
