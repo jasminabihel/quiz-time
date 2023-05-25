@@ -49,7 +49,7 @@ function startGame() {
     document.getElementById("end").disabled = false;
     document.getElementById("textIntro").classList.add("hidden");
 
-    getNextQuestion(); 
+    getNextQuestion();
 }
  
 function getNextQuestion() {
@@ -96,7 +96,7 @@ function score() {
     document.getElementById("scores").classList.remove("hidden");
     document.getElementById("questionArea").classList.add("hidden");
     document.getElementById("nav").classList.add("hidden");
-    document.getElementById("again").classList.remove("hidden");
+    
 
     document.getElementById("score").innerText = data.score;
     
