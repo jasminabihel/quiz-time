@@ -74,7 +74,6 @@ function checkAnswer(selectedAnswer) {
         data.score++;
         document.getElementById("rightAnswer").innerHTML="Correct";
 
-
     } else {
         document.getElementById("wrongAnswer").innerHTML="Sorry, you are not correct";
         
