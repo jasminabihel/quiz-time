@@ -73,11 +73,11 @@ function checkAnswer(selectedAnswer) {
     if (q.correct === selectedAnswer) {
         data.score++;
         document.getElementById("rightAnswer").innerHTML="Correct";
-        document.getElementById("answers").reset();
+
 
     } else {
         document.getElementById("wrongAnswer").innerHTML="Sorry, you are not correct";
-        document.getElementById("answers").reset();
+        
     }
     enableDisableAnswers(true);
 }

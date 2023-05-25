@@ -20,7 +20,8 @@
     </div>
     <div id="questionArea" class="hidden">
         <p>Question <span id="questionNumber"></span></p>
-        <p id="rightAnswer" id="wrongAnswer"></p>
+        <p id="rightAnswer"></p>
+        <p id="wrongAnswer"></p>
         <p id="question"></p>
         <form class="choseAnswer" id="answers">
             <input type="radio" name="choice" id ="answer1" value="answer1" onclick="checkAnswer('answer1')"/>
@@ -44,7 +45,7 @@
     <div id="scores" class="hidden">
         <h2>Finished</h2>
         <p>Your score is: <span id="score"></span></p>
-        <button data-type="start" class="hidden" id="again" onclick="startGame()">Take the quiz again</button>
+        <a href ="/index.html">Take the quiz again<a>
     </div>
     <footer>
         <copyright>@QuizTime</copyright>
