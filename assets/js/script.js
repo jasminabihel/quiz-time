@@ -46,7 +46,7 @@ function startGame() {
     document.getElementById("questionArea").classList.remove("hidden");
     document.getElementById("next").classList.remove("hidden");
     document.getElementById("end").classList.remove("hidden");
-    document.getElementById("end").disabled = true;
+    document.getElementById("end").disabled = false;
     document.getElementById("textIntro").classList.add("hidden");
 
     getNextQuestion(); 
@@ -76,7 +76,6 @@ function checkAnswer(selectedAnswer) {
     if (q.correct === selectedAnswer) {
         data.score++;
         document.getElementById("rightAnswer").innerHTML="Correct";
-
         document.getElementById("rightAnswer").reset();
 
 
