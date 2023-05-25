@@ -72,11 +72,10 @@ function checkAnswer(selectedAnswer) {
     let q = questions[data.questionNumber];
     if (q.correct === selectedAnswer) {
         data.score++;
-        let rightAnswer = document.getElementById("rightAnswer");
-        rightAnswer.innerHtml = "You are Correct";
+        alert ("You are Correct")
 
     } else {
-        document.write("<p>Sorry, that is not correct</p>");
+        alert ("Sorry, that is not correct");
     }
     enableDisableAnswers(true);
 }
@@ -92,6 +91,8 @@ function score() {
     document.getElementById("scores").classList.remove("hidden");
     document.getElementById("questionArea").classList.add("hidden");
     document.getElementById("nav").classList.add("hidden");
+    document.getElementById("again").classList.remove("hidden");
 
     document.getElementById("score").innerText = data.score;
+    
 }
