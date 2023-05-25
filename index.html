@@ -14,7 +14,8 @@
         <h1 class="title">QuizTime</h1>
     </header>
     <div id="textIntro">
-        <img src="assets/images/quiz-ribbon-banner-with-megaphone.png" alt="image of a megafon with quiz ribbon banner sign">
+        <img src="assets/images/quiz-ribbon-banner-with-megaphone.png"
+            alt="image of a megafon with quiz ribbon banner sign">
         <p>Test your knowlege with these questions and have fun!</p>
         <button data-type="start" class="start" onclick="startGame()">Start</button>
     </div>
@@ -24,18 +25,18 @@
         <p id="wrongAnswer"></p>
         <p id="question"></p>
         <form class="choseAnswer" id="answers">
-            <input type="radio" name="choice" id ="answer1" value="answer1" onclick="checkAnswer('answer1')"/>
+            <input type="radio" name="choice" id="answer1" value="answer1" onclick="checkAnswer('answer1')" />
             <label for="answer1"></label>
 
-            <input type="radio" name="choice" id ="answer2" value="answer2" onclick="checkAnswer('answer2')"/>
+            <input type="radio" name="choice" id="answer2" value="answer2" onclick="checkAnswer('answer2')" />
             <label for="answer2"></label>
 
-            <input type="radio" name="choice" id ="answer3"  value="answer3" onclick="checkAnswer('answer3')"/>
+            <input type="radio" name="choice" id="answer3" value="answer3" onclick="checkAnswer('answer3')" />
             <label for="answer3"></label>
 
-            <input type="radio" name="choice" id ="answer4" value="answer4" onclick="checkAnswer('answer4')"/>
+            <input type="radio" name="choice" id="answer4" value="answer4" onclick="checkAnswer('answer4')" />
             <label for="answer4"></label>
-           
+
         </form>
     </div>
     <div class="navigate" id="nav">
@@ -45,7 +46,7 @@
     <div id="scores" class="hidden">
         <h2>Finished</h2>
         <p>Your score is: <span id="score"></span></p>
-        <button id="again" onclick ="window.location.href ='index.html'">Take the quiz again<button>
+        <button id="again" onclick="window.location.href ='index.html'">Take the quiz again<button>
     </div>
     <footer>
         <copyright>@QuizTime</copyright>

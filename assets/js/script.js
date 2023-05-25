@@ -46,6 +46,7 @@ function startGame() {
     document.getElementById("questionArea").classList.remove("hidden");
     document.getElementById("next").classList.remove("hidden");
     document.getElementById("end").classList.remove("hidden");
+    document.getElementById("end").disabled = true;
     document.getElementById("textIntro").classList.add("hidden");
 
     getNextQuestion(); 
@@ -74,15 +75,16 @@ function checkAnswer(selectedAnswer) {
     let q = questions[data.questionNumber];
     if (q.correct === selectedAnswer) {
         data.score++;
-        while (data)
         document.getElementById("rightAnswer").innerHTML="Correct";
+
+        document.getElementById("rightAnswer").reset();
+
 
     } else {
         document.getElementById("wrongAnswer").innerHTML="Sorry, you are not correct";
         
     }
     enableDisableAnswers(true);
-
 }
 
 function enableDisableAnswers(disable){
@@ -91,16 +93,6 @@ function enableDisableAnswers(disable){
         children[i].disabled = disable;
     }
 }
-function finishButton () {
-    if (questionNumber === 4){
-        document.getElementById("end").enable;
-    }
-    else {
-        document.getElementById("end").disable;
-    }
-
-}
-
 function score() {
     document.getElementById("scores").classList.remove("hidden");
     document.getElementById("questionArea").classList.add("hidden");
