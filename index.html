@@ -38,14 +38,14 @@
            
         </form>
     </div>
-    <div class="navigate hidden" id="nav">
-        <button data-type="next" id="next" onclick="getNextQuestion()">Next</button>
-        <button data-type="end" id="end" onclick="score()">Finish</button>
+    <div class="navigate" id="nav">
+        <button data-type="next" id="next" class="hidden" onclick="getNextQuestion()">Next</button>
+        <button data-type="end" id="end" class="hidden" onclick="score()">Finish</button>
     </div>
     <div id="scores" class="hidden">
         <h2>Finished</h2>
         <p>Your score is: <span id="score"></span></p>
-        <button onclick ="window.location.href ='index.html'">Take the quiz again<button>
+        <button id="again" onclick ="window.location.href ='index.html'">Take the quiz again<button>
     </div>
     <footer>
         <copyright>@QuizTime</copyright>

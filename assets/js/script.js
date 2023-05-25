@@ -44,7 +44,7 @@ let data = {
 
 function startGame() {
     document.getElementById("questionArea").classList.remove("hidden");
-    document.getElementById("nav").classList.remove("hidden");
+    document.getElementById("next").classList.remove("hidden");
 
     document.getElementById("textIntro").classList.add("hidden");
 
