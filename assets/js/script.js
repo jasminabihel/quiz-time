@@ -88,8 +88,6 @@ function checkAnswer(selectedAnswer) {
     if (q.correct === selectedAnswer) {
         data.score++;
         setAnswerDivs("Correct", "");
-        document.getElementById("rightAnswer").reset();
-        console.log(rightAnswer);
     } else {
         setAnswerDivs("", "Sorry, you are not correct");
     }
