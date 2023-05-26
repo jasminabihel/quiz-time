@@ -87,9 +87,9 @@ function checkAnswer(selectedAnswer) {
     let q = questions[data.questionNumber];
     if (q.correct === selectedAnswer) {
         data.score++;
-        setAnswerDivs("Correct", "null");
+        setAnswerDivs("Correct", "");
     } else {
-        setAnswerDivs("null", "Sorry, you are not correct");
+        setAnswerDivs("", "Sorry, you are not correct");
     }
     enableDisableAnswers(true);
 }
