@@ -24,10 +24,13 @@ header {
 }
 
 #textIntro img {
-    height: 40%;
-    width: 20%;
+    height: 80%;
+    width: 40%;
 }
-
+#textIntro p {
+    margin: 2rem;
+    font-weight: 500;
+}
 #textIntro button {
     font-size: 140%;
 }
