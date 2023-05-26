@@ -53,11 +53,11 @@ header {
 footer {
     position: fixed;
     left: 0;
-    bottom: 0;
+    bottom: 1rem;
     width: 100%;
     font-weight: 600;
     font-size: 100%;
-    border-top: solid;
+    border-top: solid 2px blue;
     padding-top: 1rem;
 }
 
