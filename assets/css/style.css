@@ -6,8 +6,7 @@ body {
     color: #181313;
     font-size: medium;
     text-align: center;
-    display: flex;
-    flex-direction: column;
+    overflow: hidden;
 }
 
 header {
@@ -15,7 +14,10 @@ header {
 }
 
 .title {
-    border-bottom: solid;
+    border-bottom: solid 3px;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+
 }
 
 #textIntro {
@@ -26,11 +28,15 @@ header {
 #textIntro img {
     height: 60%;
     width: 30%;
+    margin-bottom: 2rem;
 }
+
 #textIntro p {
-    margin: 2rem;
+    margin: 1rem;
     font-weight: 500;
+    padding-bottom: 1rem;
 }
+
 #textIntro button {
     font-size: 140%;
 }
@@ -41,10 +47,27 @@ header {
     font-weight: 500;
 }
 
+#questionArea p {
+    font-weight: 600;
+    padding-bottom: 1rem;
+}
+
+.choseAnswer {
+    font-weight: 600;
+}
+
 .navigate {
     margin: 2rem;
     padding: 1rem;
     font-weight: 400;
+}
+
+#rightAnswer {
+    color: #228b22;
+}
+
+#wrongAnswer {
+    color: #8b0000;
 }
 
 .scores {
@@ -53,10 +76,12 @@ header {
     font-weight: 500;
 }
 
+.scores h2 {
+    padding: 1rem;
+}
+
 footer {
-    background-color: #fdf5f5;
-    color: #181313;
-    display:flex;
+    display: flex;
     flex-direction: column;
     position: fixed;
     left: 0;
@@ -64,9 +89,9 @@ footer {
     width: 100%;
     font-weight: 600;
     font-size: 100%;
-    border-top: solid 3px ;
+    border-top: solid 3px;
     padding-top: 1rem;
-    
+
 }
 
 .hidden {
