@@ -40,9 +40,12 @@ const questions = [
 let data = {
     score: 0,
     questionNumber: -1,
-}
-/* This function starts the game */
+};
 
+
+/** This starts the game
+ * add and remove class 
+ */
 function startGame() {
     document.getElementById("questionArea").classList.remove("hidden");
     document.getElementById("next").classList.remove("hidden");
@@ -53,6 +56,13 @@ function startGame() {
     getNextQuestion();
 }
 
+
+/** This function is one of the main playing areas for the quiz.
+ * add question number
+ * select answer 
+ * reset for next question
+ * and enable/disable next/ finish button
+ */
 function getNextQuestion() {
     data.questionNumber++;
 
@@ -85,6 +95,10 @@ function setAnswerDivs(rightAnswer, wrongAnswer) {
 
 }
 
+/** function tha check correct answer
+ * text correct or sorry, you are not correct when answering the question
+ * calculates your score
+ */
 function checkAnswer(selectedAnswer) {
     let q = questions[data.questionNumber];
     if (q.correct === selectedAnswer) {
@@ -98,12 +112,16 @@ function checkAnswer(selectedAnswer) {
     enableDisableAnswers(true);
 }
 
+/** function that disables answering multiple times */
 function enableDisableAnswers(disable) {
     let children = document.getElementById("answers").children;
     for (let i = 0; i < children.length; i++) {
         children[i].disabled = disable;
     }
 }
+
+/** this function adds and remove multiple class
+ */
 function score() {
     document.getElementById("scores").classList.remove("hidden");
     document.getElementById("questionArea").classList.add("hidden");
