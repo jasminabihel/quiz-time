@@ -2,7 +2,7 @@
 
 body {
     font-family: 'Raleway', sans-serif;
-    background-color: #fffcfc;
+    background-color: #fdf5f5;
     color: #181313;
     font-size: medium;
     text-align: center;
@@ -24,8 +24,8 @@ header {
 }
 
 #textIntro img {
-    height: 80%;
-    width: 40%;
+    height: 60%;
+    width: 30%;
 }
 #textIntro p {
     margin: 2rem;
@@ -54,6 +54,10 @@ header {
 }
 
 footer {
+    background-color: #fdf5f5;
+    color: #181313;
+    display:flex;
+    flex-direction: column;
     position: fixed;
     left: 0;
     bottom: 1rem;
@@ -62,6 +66,7 @@ footer {
     font-size: 100%;
     border-top: solid 3px ;
     padding-top: 1rem;
+    
 }
 
 .hidden {
