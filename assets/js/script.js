@@ -66,6 +66,7 @@ function getNextQuestion() {
     answerInputs[7].innerText = q.answer4;
 
     document.getElementById("answers").reset();
+    setAnswerDivs(null, null);
     enableDisableAnswers(false);
 
     if ((data.questionNumber + 1) < questions.length) {
@@ -79,6 +80,7 @@ function getNextQuestion() {
 
 function setAnswerDivs(rightAnswer, wrongAnswer) {
     document.getElementById("rightAnswer").innerHTML = rightAnswer;
+    
     document.getElementById("wrongAnswer").innerHTML = wrongAnswer;
 
 }
@@ -88,8 +90,10 @@ function checkAnswer(selectedAnswer) {
     if (q.correct === selectedAnswer) {
         data.score++;
         setAnswerDivs("Correct", "");
+        document.getElementById("rightAnswer").reset(click, "next");
     } else {
         setAnswerDivs("", "Sorry, you are not correct");
+        document.getElementById("wrongAnswer").reset(click, "next");
     }
     enableDisableAnswers(true);
 }
