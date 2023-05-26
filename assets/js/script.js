@@ -38,8 +38,8 @@ const questions = [
 ]
 
 let data = {
-    score:0,
-    questionNumber:-1,
+    score: 0,
+    questionNumber: -1,
 }
 
 function startGame() {
@@ -51,7 +51,7 @@ function startGame() {
 
     getNextQuestion();
 }
- 
+
 function getNextQuestion() {
     data.questionNumber++;
 
@@ -65,30 +65,42 @@ function getNextQuestion() {
     answerInputs[5].innerText = q.answer3;
     answerInputs[7].innerText = q.answer4;
 
-
-
     document.getElementById("answers").reset();
     enableDisableAnswers(false);
+
+    if ((data.questionNumber + 1) < questions.length) {
+        document.getElementById("next").disabled = false;
+        document.getElementById("end").disabled = true;
+    } else {
+        document.getElementById("next").disabled = true;
+        document.getElementById("end").disabled = false;
+    }
+}
+
+function setAnswerDivs(rightAnswer, wrongAnswer){
+    document.getElementById("rightAnswer").innerHTML = rightAnswer;
+    document.getElementById("wrongAnswer").innerHTML = wrongAnswer;
+
 }
 
 function checkAnswer(selectedAnswer) {
     let q = questions[data.questionNumber];
     if (q.correct === selectedAnswer) {
         data.score++;
-        document.getElementById("rightAnswer").innerHTML="Correct";
+        document.getElementById("rightAnswer").innerHTML = "Correct";
         document.getElementById("rightAnswer").reset();
 
 
     } else {
-        document.getElementById("wrongAnswer").innerHTML="Sorry, you are not correct";
-        
+        document.getElementById("wrongAnswer").innerHTML = "Sorry, you are not correct";
+
     }
     enableDisableAnswers(true);
 }
 
-function enableDisableAnswers(disable){
+function enableDisableAnswers(disable) {
     let children = document.getElementById("answers").children;
-    for (let i = 0; i < children.length; i++ ) {
+    for (let i = 0; i < children.length; i++) {
         children[i].disabled = disable;
     }
 }
@@ -96,8 +108,8 @@ function score() {
     document.getElementById("scores").classList.remove("hidden");
     document.getElementById("questionArea").classList.add("hidden");
     document.getElementById("nav").classList.add("hidden");
-    
+
 
     document.getElementById("score").innerText = data.score;
-    
+
 }
