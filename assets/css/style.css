@@ -33,7 +33,7 @@ header {
 
 #textIntro p {
     margin: 1rem;
-    font-weight: 500;
+    font-size: 110%;
     padding-bottom: 1rem;
 }
 
@@ -74,10 +74,26 @@ header {
     margin: 2rem;
     padding: 1rem;
     font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .scores h2 {
+    color: #0b3121;
     padding: 1rem;
+    font-style: italic;
+}
+
+.scores p {
+    font-weight: 600;
+    padding: 1rem;
+    font-size: 120%;
+
+}
+
+.scores button {
+    font-size: 120%;
 }
 
 footer {
