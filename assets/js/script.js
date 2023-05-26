@@ -77,7 +77,7 @@ function getNextQuestion() {
     }
 }
 
-function setAnswerDivs(rightAnswer, wrongAnswer){
+function setAnswerDivs(rightAnswer, wrongAnswer) {
     document.getElementById("rightAnswer").innerHTML = rightAnswer;
     document.getElementById("wrongAnswer").innerHTML = wrongAnswer;
 
@@ -87,13 +87,9 @@ function checkAnswer(selectedAnswer) {
     let q = questions[data.questionNumber];
     if (q.correct === selectedAnswer) {
         data.score++;
-        document.getElementById("rightAnswer").innerHTML = "Correct";
-        document.getElementById("rightAnswer").reset();
-
-
+        setAnswerDivs("Correct", "");
     } else {
-        document.getElementById("wrongAnswer").innerHTML = "Sorry, you are not correct";
-
+        setAnswerDivs("", "Sorry, you are not correct");
     }
     enableDisableAnswers(true);
 }
@@ -108,8 +104,5 @@ function score() {
     document.getElementById("scores").classList.remove("hidden");
     document.getElementById("questionArea").classList.add("hidden");
     document.getElementById("nav").classList.add("hidden");
-
-
     document.getElementById("score").innerText = data.score;
-
 }
