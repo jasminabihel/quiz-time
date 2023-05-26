@@ -10,7 +10,7 @@ body {
 }
 
 header {
-    font-size: 120%;
+    font-size: 100%;
 }
 
 .title {
@@ -83,17 +83,18 @@ header {
     color: #0b3121;
     padding: 1rem;
     font-style: italic;
+    font-size: 110%;
 }
 
 .scores p {
     font-weight: 600;
     padding: 1rem;
-    font-size: 120%;
+    font-size: 100%;
 
 }
 
 .scores button {
-    font-size: 120%;
+    font-size: 100%;
 }
 
 footer {
@@ -112,4 +113,20 @@ footer {
 
 .hidden {
     display: none;
+}
+
+/* for screens smaller from 800px */
+
+@media screen and (max-width: 800px) {
+
+    #textIntro {
+        margin: 0;
+        padding: 0;
+    }
+
+    #questionArea {
+        margin: 0;
+        padding: 0;
+    }
+
 }
