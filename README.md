@@ -83,13 +83,13 @@ The font-family and the colors that were chosen were tested in devtools Lighthou
 ## **Deployment** ##
 
 * The web page was deployed to GitHub pages using the following steps:
-    - Navigaate to GitHub repository, then Settings.
+    - Navigate to GitHub repository, then Settings.
     - On the left side, inside the Settings menu click on the pages tab.
     - Go to build and deployment, and then choose source: Deploy from branch.
     - Under branch choose main for branch and root for folder. 
     - When you press on the save button, the site is being deployed.
 
-The live link can be found here:<a href="">QuizTime</a>
+The live link can be found here:<a href="https://jasminabihel.github.io/quiz-time/">QuizTime</a>
 
 ## **Credits** ##
 
