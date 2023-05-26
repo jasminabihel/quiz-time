@@ -44,7 +44,9 @@ The title of the page is centered.
 
 #### **Footer** ####
 
-The footer is simple with only containing the text QuizTime 2023. 
+The footer is simple with only containing the text QuizTime 2023.
+
+
 ![alttext](doc/img/footer-quiztime.png)
 
 ### *Future features* ###
@@ -96,6 +98,5 @@ The live link can be found here:<a href="https://jasminabihel.github.io/quiz-tim
 * The image for the picture on the start page is taken from pngtree.com
 <a href='https://pngtree.com/so/quiz'>quiz png from pngtree.com/</a>
 
-* The code for the fixed footer was taekn from W3Schools. 
-
-<a href="https://www.w3schools.com/howto/howto_css_fixed_footer.asp" > Fixed footer</a>
+* The code for the fixed footer was taekn from W3Schools.
+<a href="https://www.w3schools.com/howto/howto_css_fixed_footer.asp"> Fixed footer </a>
