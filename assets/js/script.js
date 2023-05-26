@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () { })
+document.addEventListener("DOMContentLoaded", function () { });
 
 const questions = [
     {
@@ -35,12 +35,13 @@ const questions = [
         correct: "answer3",
 
     }
-]
+];
 
 let data = {
     score: 0,
     questionNumber: -1,
 }
+/* This function starts the game */
 
 function startGame() {
     document.getElementById("questionArea").classList.remove("hidden");
@@ -80,7 +81,6 @@ function getNextQuestion() {
 
 function setAnswerDivs(rightAnswer, wrongAnswer) {
     document.getElementById("rightAnswer").innerHTML = rightAnswer;
-    
     document.getElementById("wrongAnswer").innerHTML = wrongAnswer;
 
 }
@@ -90,10 +90,10 @@ function checkAnswer(selectedAnswer) {
     if (q.correct === selectedAnswer) {
         data.score++;
         setAnswerDivs("Correct", "");
-        document.getElementById("rightAnswer").reset(click, "next");
+
     } else {
         setAnswerDivs("", "Sorry, you are not correct");
-        document.getElementById("wrongAnswer").reset(click, "next");
+
     }
     enableDisableAnswers(true);
 }

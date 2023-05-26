@@ -5,4 +5,4 @@ img quiz PNG Designed By Ai designer from https://pngtree.com/freepng/quiz-ribbo
 
 fixed footer 
 
-<a href="https://www.w3schools.com/howto/howto_css_fixed_footer.asp" ></a>
+<a href="https://www.w3schools.com/howto/howto_css_fixed_footer.asp" > Taken from W# schools</a>
